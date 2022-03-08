@@ -23,7 +23,7 @@ public class LogTestController {
 		log.info(" info log = {}", name);
 		log.warn(" info log = {}", name);
 		log.error(" info log = {}", name);
-		log.info(name)
+		log.info(name);
 		return "OK";
 	}
 }

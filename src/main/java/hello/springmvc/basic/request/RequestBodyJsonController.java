@@ -7,11 +7,14 @@ import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StreamUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -50,5 +53,13 @@ public class RequestBodyJsonController {
 	public String requestBodyJsonV3(@RequestBody HelloData helloData) throws IOException {
 		log.info("helloData = {}", helloData);
 		return "JSON OK~! V3";
+	}
+	
+	@ResponseStatus(HttpStatus.OK)
+	@ResponseBody
+	@GetMapping(value = "/testt", produces = "text/html")
+	public String tes() {
+		String makeHtml = "<html><head><title>naver.com</title></head><body><h1>world</h1><p>Hello HTML return jiseong</p></body></html>";
+		return makeHtml;
 	}
 }

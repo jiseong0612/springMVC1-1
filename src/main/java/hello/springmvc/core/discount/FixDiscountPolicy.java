@@ -2,7 +2,6 @@ package hello.springmvc.core.discount;
 
 import hello.springmvc.core.domain.Grade;
 import hello.springmvc.core.domain.Member;
-
 public class FixDiscountPolicy implements DiscountPolicy{
 	private int discountFixAmount = 1000;
 		

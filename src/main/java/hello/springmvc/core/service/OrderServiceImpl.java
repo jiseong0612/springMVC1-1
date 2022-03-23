@@ -1,10 +1,12 @@
 package hello.springmvc.core.service;
 
+import org.springframework.stereotype.Component;
+
 import hello.springmvc.core.discount.DiscountPolicy;
 import hello.springmvc.core.domain.Member;
 import hello.springmvc.core.domain.Order;
 import hello.springmvc.core.repository.MemberRepository;
-
+@Component("service")
 public class OrderServiceImpl implements OrderService{
 	
 	private final MemberRepository memberRepository;

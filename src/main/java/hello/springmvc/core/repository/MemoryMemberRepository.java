@@ -3,8 +3,10 @@ package hello.springmvc.core.repository;
 import java.util.HashMap;
 import java.util.Map;
 
-import hello.springmvc.core.domain.Member;
+import org.springframework.stereotype.Component;
 
+import hello.springmvc.core.domain.Member;
+@Component
 public class MemoryMemberRepository implements MemberRepository {
 	private static Map<Long, Member> store = new HashMap<>();
 	@Override

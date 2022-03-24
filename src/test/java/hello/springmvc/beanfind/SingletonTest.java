@@ -15,11 +15,11 @@ public class SingletonTest {
 	public void appConfigTest() {
 		AppConfig ap = new AppConfig();
 		
-		MemberService memberService1 = ap.memberService();
-		MemberService memberService2 = ap.memberService();
-		
-		System.out.println(memberService1);
-		System.out.println(memberService2);
+//		MemberService memberService1 = ap.memberService();
+//		MemberService memberService2 = ap.memberService();
+//		
+//		System.out.println(memberService1);
+//		System.out.println(memberService2);
 		
 		//hello.springmvc.core.service.MemberServiceImpl@6989da5e  다른 객체임을 확인할 수 있다.
 		//hello.springmvc.core.service.MemberServiceImpl@385c9627

@@ -1,19 +1,13 @@
 package hello.springmvc;
 
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.FilterType;
 
 @Configuration
-@ComponentScan
+@ComponentScan(excludeFilters = @Filter(type = FilterType.ANNOTATION, classes = Configuration.class))
 public class AutoAppConfig {
-	private int age= 10;
 
-	private int getAge() {
-		return age;
-	}
-
-	private void setAge(int age) {
-		this.age = age;
-	}
 	
 }

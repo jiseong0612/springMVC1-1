@@ -1,11 +1,13 @@
 package hello.springmvc.core.discount;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import hello.springmvc.core.domain.Grade;
 import hello.springmvc.core.domain.Member;
 
 @Component
+@Primary
 public class RateDiscountPolicy implements DiscountPolicy {
 	private final int discountPercent = 10;
 
@@ -17,7 +19,6 @@ public class RateDiscountPolicy implements DiscountPolicy {
 		} else {
 			return 0;
 		}
-
 	}
 
 }

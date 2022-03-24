@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import hello.springmvc.core.domain.Member;
 import hello.springmvc.core.repository.MemberRepository;
 
-@Component("service")
+@Component
 public class MemberServiceImpl implements MemberService {
 	// AppConfig.class에서 생성과 주입을 도와준다.
 	private final MemberRepository memberRepository;
